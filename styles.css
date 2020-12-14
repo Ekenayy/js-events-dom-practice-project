@@ -1,0 +1,12 @@
+#new-mantra-form input {
+    display: block;
+}
+
+#new-mantra-form label {
+    margin-top: 20px;
+    display: block;
+}
+
+#new-mantra-form input[type="submit"] {
+    margin-top: 20px;
+}
