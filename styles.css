@@ -1,3 +1,39 @@
+
+html {
+    height: 100%;
+    width: 100;
+    font-family: "Montserrat", sans-serif;
+}
+
+.mantra-button {
+font-family: "Montserrat", sans-serif;
+display:inline-block;
+padding: 0.3em 1.2em;
+margin: 0 0.3em 0.3em 0;
+border-radius: 2em;
+box-sizing: border-box;
+text-decoration: none;
+font-weight: 300;
+color:#FFFFFF;
+background-color: #fa6b6b;
+text-align:center;
+transition: all 0.2s;
+position: relative; 
+}
+
+
+ #page-title {
+     position: relative;
+     justify-content: center;
+     text-align: center; 
+ }
+
+body {
+    min-height: 100%;
+    min-width: 100%;
+    background: #b4fdda; 
+}
+
 #new-mantra-form input {
     display: block;
 }
@@ -9,4 +45,20 @@
 
 #new-mantra-form input[type="submit"] {
     margin-top: 20px;
+}
+
+#add-mantra-btn { 
+font-family: "Montserrat", sans-serif;
+display:inline-block;
+padding: 0.3em 1.2em;
+margin: 0 0.3em 0.3em 0;
+border-radius: 2em;
+box-sizing: border-box;
+text-decoration: none;
+font-weight: bold;
+color:#FFFFFF;
+background-color: #fa6b6b;
+text-align:center;
+transition: all 0.2s;
+position: relative; 
 }

@@ -5,16 +5,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="styles.css">
-    <title>My Practice Project</title>
-    <meta name="description" content="">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">    <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="index.js" async defer></script>
 </head>
 
 <body>
-<h1> Use events to unlock mantras </h1> 
+<h1 id="page-title"> Use events to unlock mantras </h1> 
 
 <h3 id="name"> </h3>
+
+<div style='text-align:center;'>
+<button class="mantra-button">Click for a new mantra</button>
+</div>
 
 <form id="new-mantra-form">
     <h4>Add a New mantra</h4>
@@ -27,10 +31,10 @@
     <label for="link">Video Link: </label>
     <input type="text" name="video" id="mantra-video">
 
-    <label for="link">Photo Link: </label>
-    <input type="text" name="photo" id="mantra-photo">
+    <label for="link">Website Link: </label>
+    <input type="text" name="photo" id="mantra-website">
 
-    <input type="submit" value="Add Mantra" />
+    <input type="submit" value="Add Mantra" id="add-mantra-btn" />
 </form>
 
 </body>
