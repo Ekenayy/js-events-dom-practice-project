@@ -23,12 +23,13 @@ let mantraArray = [
     }
 ]
 
-let randomMantra = mantraArray[Math.floor(Math.random() * mantraArray.length)]
+// let randomMantra = mantraArray[Math.floor(Math.random() * mantraArray.length)]
 
 let newMantraBtn = document.querySelector('button.mantra-button')
 let form = document.querySelector('form#new-mantra-form')
 let formName = form.name
 let formDescription = form.description
+let formVideo = form.video
 
  function toggleColor (element) {
     let colorsArray = [
@@ -59,7 +60,7 @@ function renderMantra (mantraObject) {
     const a = document.createElement("a")
     a.href = mantraObject.video
     a.target = "_blank"
-    a.textContent = `Here's a video about the ${mantraObject.name} species!`
+    a.textContent = `Here's a video about the ${mantraObject.name} mantra!`
 
     const h2 = document.createElement('h2')
     var linkedName = mantraObject.name.link(mantraObject.website)
@@ -77,27 +78,37 @@ function renderMantra (mantraObject) {
  newMantraBtn.addEventListener('mouseover', toggleColor)
  formName.addEventListener('click', toggleColor )
  formDescription.addEventListener('change', toggleColor)
-
+ formVideo.addEventListener('paste', toggleColor)
  
 
- newMantraBtn.addEventListener('click', function (evt) {
+ newMantraBtn.addEventListener('click', evt => {
     evt.preventDefault()
 
-    if(mantraArray.length > 0){
+    if (mantraArray.length > 0){
         let theMantra = mantraArray.pop()
         renderMantra(theMantra)
     } else {
         newMantraBtn.textContent = "No more mantras. Add your own now :)"
     }
 
-   
-    // renderMantra(randomMantra)
-    // mantraArray.forEach(function (mantra) {
-    //     if 
-    //     return mantra
-    // })
-// debugger 
  }) 
+
+ form.addEventListener('submit', evt => {
+     evt.preventDefault()
+
+    const mantraObject = {
+     name: formName.value,
+     description: formDescription.value, 
+     video: formVideo.value,
+     photo: form.photo.value,
+     website: form.website.value
+    }
+
+
+    renderMantra(mantraObject)
+
+    //  debugger 
+ })
 
  
 
